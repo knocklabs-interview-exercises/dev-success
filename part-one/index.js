@@ -1,9 +1,9 @@
 /*
 1: Write a function that takes a string and returns:
 
-- "short" if the string is up to 4 characters
-- "medium": if the string is more than 4 characters
-- "long": if the string is more than 8 characters
+- "short" if the string is less than 4 characters
+- "medium": if the string is 4 or more characters
+- "long": if the string is 8 or more characters
 - "unknown" if the input is not a string
 */
 
