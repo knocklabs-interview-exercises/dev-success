@@ -1,16 +1,17 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useGuide } from '@knocklabs/react'
 import './styles.css'
 
 export function CustomModal() {
   const { step } = useGuide({ type: 'custom-modal' })
+  const [isClosed, setIsClosed] = useState(false)
 
   useEffect(() => {
     console.log('📋 Guide API Response:', step)
     if (step) step.markAsSeen()
   }, [step])
 
-  if (!step) return null
+  if (!step || isClosed) return null
 
   return (
     <div className="custom-modal-overlay">
@@ -18,6 +19,7 @@ export function CustomModal() {
         <button
           className="custom-modal-close"
           aria-label="Close"
+          onClick={() => setIsClosed(true)}
         >
           ×
         </button>
