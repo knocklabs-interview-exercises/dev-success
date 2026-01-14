@@ -19,7 +19,7 @@ function App() {
       user={{currentUser}}
     >
       <KnockGuidesProvider
-        readyToTarget={false}
+        readyToTarget={true}
         listenForUpdates={true}
         trackLocationFromWindow={true}
       >

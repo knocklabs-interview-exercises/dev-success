@@ -35,8 +35,8 @@ If the candidate doesn't offer anything, nudge them towards one to gauge their r
 1. Render the guide
 - Typo in App.jsx: `KnockGuidesProvider` should be `KnockGuideProvider`
 - `KnockGuideProvider` is missing the channel ID: `channelId={KNOCK_GUIDE_ID}`
-- The `readyToTarget` prop is set to `false`, should be `true`.
 - User authentication: Formatting issue. Should be `user={ currentUser }` or a version thereof.
+
 2. User doesn't see it after dismissal
 - The implementation is missing a call to `markAsArchived`. Update the [X] button: `onClick={() => step.markAsArchived()}`. 
 
