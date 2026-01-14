@@ -1,6 +1,7 @@
 import { Knock } from "@knocklabs/node";
+import "dotenv/config";
 
-const KNOCK_API_KEY = YOUR_KNOCK_API_KEY_HERE;
+const KNOCK_API_KEY = process.env.VITE_KNOCK_PUBLIC_API_KEY;
 
 // Initialize Knock client
 const knock = new Knock(KNOCK_API_KEY);

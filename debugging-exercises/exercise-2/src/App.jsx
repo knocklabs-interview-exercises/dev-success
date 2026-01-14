@@ -5,9 +5,11 @@ import { CustomModal } from './CustomModal'
 const KNOCK_PUBLIC_API_KEY = import.meta.env.VITE_KNOCK_PUBLIC_API_KEY
 const KNOCK_GUIDE_CHANNEL_ID = "a6c9db2b-5cf0-4f8d-8311-e3f75b1fb997";
 
+const UNIQUE_USER_ID = "update_this_before_running";
+
 // Mock current user - in a real app, this would come from your auth system
 const currentUser = {
-  id: 'user_123',
+  id: UNIQUE_USER_ID,
   name: 'Sarah Johnson',
   email: 'sarah@company.com'
 }
