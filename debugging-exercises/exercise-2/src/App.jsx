@@ -3,7 +3,7 @@ import { CustomModal } from './CustomModal'
 
 // App configuration
 const KNOCK_PUBLIC_API_KEY = import.meta.env.VITE_KNOCK_PUBLIC_API_KEY
-const KNOCK_GUIDE_ID = import.meta.env.VITE_KNOCK_GUIDE_ID
+const KNOCK_GUIDE_CHANNEL_ID = "a6c9db2b-5cf0-4f8d-8311-e3f75b1fb997";
 
 // Mock current user - in a real app, this would come from your auth system
 const currentUser = {
@@ -19,7 +19,7 @@ function App() {
       user={{currentUser}}
     >
       <KnockGuidesProvider
-        readyToTarget={false}
+        readyToTarget={true}
         listenForUpdates={true}
         trackLocationFromWindow={true}
       >
