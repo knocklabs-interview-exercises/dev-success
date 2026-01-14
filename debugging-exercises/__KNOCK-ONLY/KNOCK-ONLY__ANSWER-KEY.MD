@@ -38,7 +38,7 @@ If the candidate doesn't offer anything, nudge them towards one to gauge their r
 - The `readyToTarget` prop is set to `false`, should be `true`.
 - User authentication: Formatting issue. Should be `user={ currentUser }` or a version thereof.
 2. User doesn't see it after dismissal
-- The implementation is missing a call to `markAsArchived`. Add this to the [X] button: `onClick={() => step.markAsArchived()}`. 
+- The implementation is missing a call to `markAsArchived`. Update the [X] button: `onClick={() => step.markAsArchived()}`. 
 
 
 ## Reference
