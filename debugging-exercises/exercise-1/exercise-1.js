@@ -8,15 +8,15 @@ const knock = new Knock(KNOCK_API_KEY);
 
 // Send a welcome notification to a new user, called after user completes signup flow
 
-async function sendWelcomeNotification(newUser, userName) {
+async function sendWelcomeNotification(exampleUser, exampleUserName) {
   try {
-    console.log(`📡 Sending welcome notification to user: ${newUser} \n`);
+    console.log(`📡 Sending welcome notification to user: ${exampleUser} \n`);
 
     // Trigger the welcome workflow
     const result = await knock.workflows.trigger("welcome-flow", {
       data: {
-        recipients: newUser,
-        userName: userName,
+        recipients: exampleUser,
+        exampleUserName: exampleUserName,
         welcomeMessage: "Welcome to our platform!",
         signupDate: new Date().toISOString()
       }
