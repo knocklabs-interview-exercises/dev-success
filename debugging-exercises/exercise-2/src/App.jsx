@@ -1,4 +1,4 @@
-import { KnockProvider, KnockGuidesProvider } from '@knocklabs/react'
+import { KnockProvider, NocGuideProvider } from '@knocklabs/react'
 import { CustomModal } from './CustomModal'
 
 // App configuration
@@ -7,7 +7,7 @@ const KNOCK_GUIDE_CHANNEL_ID = "a6c9db2b-5cf0-4f8d-8311-e3f75b1fb997";
 
 const UNIQUE_USER_ID = "update_this_before_running";
 
-// Mock current user - in a real app, this would come from your auth system
+// Mock current user 
 const currentUser = {
   id: UNIQUE_USER_ID,
   name: 'Sarah Johnson',
@@ -17,10 +17,12 @@ const currentUser = {
 function App() {
   return (
     <KnockProvider
+    // Initialize Knock provider and authenticate the user
       apiKey={KNOCK_PUBLIC_API_KEY}
       user={{currentUser}}
     >
-      <KnockGuidesProvider
+      <NocGuideProvider
+      // Initialize Knock guides provider 
         readyToTarget={true}
         listenForUpdates={true}
         trackLocationFromWindow={true}
@@ -40,7 +42,7 @@ function App() {
 
           <CustomModal />
         </div>
-      </KnockGuidesProvider>
+      </NocGuideProvider>
     </KnockProvider>
   )
 }
