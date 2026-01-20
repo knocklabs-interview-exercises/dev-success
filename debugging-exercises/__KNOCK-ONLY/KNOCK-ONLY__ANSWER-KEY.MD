@@ -12,7 +12,7 @@ Ahead of the interview:
 - Candidates are not expected to have Knock-specific product knowledge and we should guide them in the right direction when appropriate.
 - In a 30 minute interview, it's unlikely that all candidates will make it to the very end of each exercise. Although doing so would be a strong favorable indicator, the inability to get to the end isn't inherently a negative indicator. Consider how the candidate addressed the broken code:
     - What did they consider as potential issues?
-    - How did they evalutate those considerations?
+    - How did they evaluate those considerations?
     - How did they utilize resources?
     - How did they interact with you? With the Knock docs?
 
@@ -21,8 +21,8 @@ Ahead of the interview:
 
 - You'll work through customer support scenarios where you'll need to review customer code and identify issues. 
 - The objective is to understand how you think through problems, so think out loud as much as possible.
-- We don't expect you to  be a software engineer or be an expert on Knock's product. 
-- This is a collaborative exercise. Feel free to think out loud, ask questions, and use any resources you'd normally use when helping a customer.
+- We don't expect you to  be a software engineer or be an expert on Knock's product. The exercises use Knock examples, but we're looking for general debugging skills. You may need to reference Knock documentation, but the issues won't require in depth product knowledge. We're interested in your general approach to the exercises.
+- This is a collaborative exercise. Feel free to think out loud, ask questions, and use any resources you'd normally use when helping a customer. If there are clarifying questions for the customer, I can give you a mock response to them.
 - **Before we start**: If you have AI autocomplete turned on, please turn it off. 
 
 ### Resources to use
@@ -38,7 +38,7 @@ Ahead of the interview:
 3. Instruct the candidate to update the `.env` files provided in the project -- there's a file per exercise.
 4. In ../exercise-2/src/App.jsx, instruct the candidate to add a unique user ID. This could be a UUID you send them, or some random combination of numbers and their name. The point of this is to avoid any user IDs already in the account and ensure the guide isn't already archived. 
 
-Note: The VITE_ prefix in exercise-1 is intentional so it's easy to copy and paste the keys and minimize setup time. 
+Note: Both exercises use the same `VITE_` prefix in their `.env` files so candidates can easily copy and paste keys between exercises, minimizing setup time. 
 
 ## Answer key
 
@@ -59,12 +59,13 @@ If the candidate doesn't offer anything, nudge them towards one to gauge their r
 
 ### Exercise 2
 1. Render the guide
-- Typo in App.jsx: `KnockGuidesProvider` should be `KnockGuideProvider`
+- Typo in App.jsx (import and usage): `NocGuideProvider` should be `KnockGuideProvider`
 - `KnockGuideProvider` is missing the channel ID: `channelId={KNOCK_GUIDE_CHANNEL_ID}`
 - User authentication: Formatting issue. Should be `user={ currentUser }` or a version thereof.
 
 2. User doesn't see it after dismissal
 - The implementation is missing a call to `markAsArchived`. Update the [X] button: `onClick={() => step.markAsArchived()}`. 
+- The `markAsArchived` request will also close the modal (it will be removed from eligibility once archived), but it's fine if the candidate doesn't have that depth of knowledge about guides. The important thing is that they're looking in the right places for click handling logic and asking the right questions about behavior.
 
 
 ## Reference
