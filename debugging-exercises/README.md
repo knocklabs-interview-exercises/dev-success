@@ -48,7 +48,7 @@ But when I run my React implementation, the guide doesn't display.... I can't fi
 
 Here's what I'm trying to achieve:
 - Display the feature announcement modal on the dashboard for all users when they first log in
-- Track engagement so users only see it once (don't show again after dismissal) and won't be bothered every time they come back to the dashboard
+- Track engagement so users only see it once (don't show again after dismissal) and won't be bothered every time they refresh dashboard
 
 My implementation is in the `exercise-2` folder. Can you help me figure out what's wrong?
 
