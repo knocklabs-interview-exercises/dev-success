@@ -6,6 +6,7 @@
     "start": "node exercise-1.js"
   },
   "dependencies": {
-    "@knocklabs/node": "^0.6.6"
+    "@knocklabs/node": "^0.6.6",
+    "dotenv": "^16.4.5"
   }
 }
