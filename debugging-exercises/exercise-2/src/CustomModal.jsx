@@ -3,11 +3,13 @@ import { useGuide } from '@knocklabs/react'
 import './styles.css'
 
 export function CustomModal() {
-  const { step } = useGuide({ type: 'custom-modal' })
+  const guideResponse = useGuide({ type: 'custom-modal' })
+  const { step } = guideResponse
   const [isClosed, setIsClosed] = useState(false)
 
   useEffect(() => {
-    console.log('📋 Guide API Response:', step)
+    console.log('📋 Guide API Response:', guideResponse)
+    console.log('📋 Guide:', step)
     if (step) step.markAsSeen()
   }, [step])
 
