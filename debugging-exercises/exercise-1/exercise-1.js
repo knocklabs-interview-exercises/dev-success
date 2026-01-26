@@ -14,8 +14,8 @@ async function sendWelcomeNotification(exampleUser, exampleUserName) {
 
     // Trigger the welcome workflow
     const result = await knock.workflows.trigger("welcome-flow", {
+      sendTo: exampleUser,
       data: {
-        recipients: exampleUser,
         exampleUserName: exampleUserName,
         welcomeMessage: "Welcome to our platform!",
         signupDate: new Date().toISOString()
